@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import './About.scss';
+import portraitImage from '../images/Portrait.jpeg';
 
 function About() {
   const [isInView, setIsInView] = useState(false);
@@ -56,7 +57,7 @@ function About() {
             animate={isInView ? { scale: 1, opacity: 1 } : {}}
             transition={{ delay: 0.7, duration: 1 }}
           >
-            <img src="/images/Portrait.jpeg" alt="Bertrand Gatinier" />
+            <img src={portraitImage} alt="Bertrand Gatinier" />
           </motion.div>
           <motion.div
             className="about-text-wrapper"
