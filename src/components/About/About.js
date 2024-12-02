@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import './About.scss';
-import portraitImage from '../images/Portrait.jpeg';
+import portraitImage from '../../images/Portrait.jpeg';
 
 function About() {
   const [isInView, setIsInView] = useState(false);
