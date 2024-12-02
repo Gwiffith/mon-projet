@@ -1,0 +1,46 @@
+@import '../../../styles/_variables.scss';
+
+.skill-card {
+  background: linear-gradient(135deg, $card-bg, lighten($card-bg, 10%));
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .skill-icon {
+    font-size: 3rem;
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: $secondary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    .star {
+      font-size: 1.5rem;
+
+      &.filled {
+        color: $primary-color; 
+      }
+
+      &.empty {
+        color: $secondary-color; 
+      }
+    }
+  }
+}

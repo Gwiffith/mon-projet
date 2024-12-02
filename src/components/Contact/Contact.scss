@@ -1,0 +1,124 @@
+@import '../../styles/_variables.scss';
+
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: $contact-bg;
+  color: $contact-text;
+  text-align: center;
+
+  h2 {
+    color: $primary-color;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    margin-top: 3rem;
+    color: lighten($contact-text, 10%);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto 3rem auto;
+
+    label {
+      margin-bottom: 0.5rem;
+      text-align: left;
+      color: $contact-text;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      padding: 1rem;
+      border: 2px solid $contact-text;
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      background-color: lighten($contact-bg, 5%);
+      color: $contact-text;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+        box-shadow: 0 0 5px rgba(239, 96, 1, 0.5); // Légère lueur du $primary-color
+      }
+    }
+
+    .cta-button {
+      align-self: center;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: #fff;
+      background-color: $primary-color;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        background-color: $primary-hover;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; // Assure que les liens sociaux sont bien centrés
+    flex-wrap: wrap;
+
+    li {
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        .social-icon {
+          font-size: 2rem;
+          margin-right: 0.5rem;
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        &:hover {
+          color: $secondary-color;
+
+          .social-icon {
+            transform: rotate(20deg) scale(1.2);
+            color: $primary-hover;
+          }
+        }
+      }
+
+      p {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: lighten($contact-text, 10%);
+        text-align: center;
+        max-width: 200px; // Pour éviter un texte trop large
+      }
+    }
+  }
+}

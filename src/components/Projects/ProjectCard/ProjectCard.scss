@@ -1,0 +1,75 @@
+@import '../../../styles/_variables.scss';
+
+.project-card {
+  background: linear-gradient(135deg, $card-bg, lighten($card-bg, 10%)); // Ajout d'un léger gradient
+  padding: 1.5rem;
+  border-radius: 15px;
+  max-width: 400px;  /* Fixe la largeur maximale */
+  width: calc(100% - 2rem); /* Permet à chaque carte de s'adapter tout en gardant une largeur maximale */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  &:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-image {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    .project-logo {
+      width: auto; // Ajustement de la taille pour une meilleure harmonie
+      height: 33px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $secondary-color;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .collapse-content {
+      margin-top: 1rem;
+      color: $text-color;
+      text-align: left;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .project-link,
+    .project-repo {
+      text-decoration: none;
+      width: 70%;
+      color: #fff;
+      background-color: $primary-color;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        background-color: $primary-hover;
+        transform: scale(1.05);
+      }
+    }
+
+    .project-repo {
+      margin-top: 0.5rem;
+    }
+  }
+}

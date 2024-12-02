@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Booki",
+    "description": "Booki est une maquette de site de réservation de logements et d'activités réalisée à des fins de démonstration. Ce projet se concentre sur la mise en place d'une interface moderne et intuitive, en suivant précisément une maquette prédéfinie. Développé uniquement avec HTML et CSS, le site met en avant les compétences de structuration et de stylisation, sans fonctionnalités dynamiques ou interactivité. L'objectif principal était de reproduire fidèlement la conception visuelle et d'assurer une mise en page cohérente sur différentes tailles d'écran.",
+    "image": "/Images/Booki-min.png",
+    "link": "https://gwiffith.github.io/Projet-2-Booki/",
+    "github": "https://github.com/Gwiffith/Projet-2-Booki.git",
+    "logo": "/Images/logos/Logo-booki.png"
+  },
+  {
+    "title": "Architecte Sophie Bluel",
+    "description": "Le site 'Architecte Sophie Bluel' est un projet de refonte d'une vitrine professionnelle, mettant en avant les réalisations d'une architecte. Ce projet a permis d'explorer l'intégration d'une interface utilisateur fluide et élégante en utilisant JavaScript, HTML, et CSS, pour offrir une expérience simple et épurée à l'utilisateur. La gestion des éléments dynamiques, comme la galerie de projets, a été une part importante de ce travail.",
+    "image": "/Images/Architecte.png",
+    "link": "https://gwiffith.github.io/Projet-3-site-Sophie-Bluel/",
+    "github": "https://github.com/Gwiffith/Projet-3-site-Sophie-Bluel.git",
+    "logo": "/Images/logos/Logo-architecte.png"
+  },
+  {
+    "title": "Kasa",
+    "description": "Kasa est une application créée pour mettre en avant des logements en location, avec une interface construite en React. Ce projet met l'accent sur l'expérience utilisateur, avec des composants réutilisables et une gestion d'état efficace pour offrir une navigation fluide et une présentation agréable des logements. L'objectif était de créer une plateforme dynamique et responsive qui s'adapte aux différents supports.",
+    "image": "/Images/Kasa-min.png",
+    "link": "https://gwiffith.github.io/Projet-5-kasa/",
+    "github": "https://github.com/Gwiffith/Projet-5-kasa.git",
+    "logo": "/Images/logos/Logo-kasa.png"
+  }
+]

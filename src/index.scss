@@ -1,0 +1,32 @@
+@import './styles/_variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;  /* Pour empêcher le défilement horizontal */
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif; // Police pour le corps du texte
+    background-color: $background-color; // Utilise ta variable de couleur de fond
+    color: $text-color; // Utilise ta variable de couleur de texte
+    line-height: 1.6; // Une bonne hauteur de ligne pour la lisibilité
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; // Police pour les titres
+    font-weight: 700; // Utilise une épaisseur plus épaisse pour rendre les titres plus impactants
+    color: $primary-color; // Associe la couleur primaire aux titres
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-family: 'Poppins', sans-serif; // Assure que les paragraphes utilisent la bonne police
+    margin-bottom: 1.5rem;
+  }

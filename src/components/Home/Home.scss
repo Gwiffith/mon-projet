@@ -1,0 +1,109 @@
+@import '../../styles/_variables.scss';
+
+.home-section {
+  position: relative; 
+  height: 100vh; /* Garde la section pleine hauteur pour les grands écrans */
+  padding: 5rem 2rem;
+  overflow: hidden; 
+  background-color: $background-color;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+
+  @media (max-width: 768px) {
+    height: auto; /* Ajuste la hauteur sur mobile */
+    padding: 3rem 1.5rem; /* Réduction des marges sur mobile */
+  }
+
+  @media (max-width: 1024px), (min-width: 768px) {
+    height: 80vh;
+  }
+
+  #tsparticles {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; 
+    height: 100%;
+  }
+
+  .home-content {
+    position: relative; 
+    z-index: 1; 
+    text-align: center;
+
+    .h1-wrapper {
+      height: 6rem; /* Fixe la hauteur pour éviter les sauts pendant l'animation */
+      @media (max-width: 768px) {
+        height: 3.5rem; /* Ajuste la hauteur pour mobile */
+      }
+      animation: fadeIn 1.5s ease-in-out; /* Animation d'apparition douce pour le titre */
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    h1 {
+      font-size: 5rem;
+      color: $primary-color;
+      margin-bottom: 1rem;
+      font-weight: bold;
+
+      @media (max-width: 1024px), (min-width: 768px) {
+        font-size: 3rem; /* Réduction de la taille de la police sur mobile */
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 2rem;
+      }
+    }
+
+    .home-description {
+      margin-top: 1.5rem; /* Ajout de marge pour séparer le titre et le contenu */
+      p {
+        font-size: 1.5rem;
+        color: $primary-hover;
+
+        @media (max-width: 1024px), (min-width: 768px) {
+          font-size: 1.2rem; /* Ajustement pour plus petit écran */
+          margin-top: 6rem;
+        }
+      }
+
+      .cta-button {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          background-color: $primary-hover;
+          transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1rem;
+          padding: 0.8rem 1.5rem; /* Ajustement pour plus petit écran */
+        }
+      }
+    }
+  }
+}

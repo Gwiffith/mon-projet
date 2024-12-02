@@ -1,0 +1,102 @@
+@import '../../styles/_variables.scss';
+
+nav {
+  background-color: $background-color;
+  padding: 1rem;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    color: $text-color;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 250px;
+      background-color: $background-color;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding-top: 5rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    li {
+      @media (max-width: 768px) {
+        width: 100%; /* Chaque élément occupe toute la largeur disponible */
+        display: flex; /* Utilisé pour centrer le lien */
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+        text-wrap: nowrap;
+        color: $text-color;
+        padding: 0.8rem 1.2rem;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+        @media (max-width: 768px) {
+          width: 80%; /* Largeur uniforme pour les liens uniquement en mobile */
+          text-align: center;
+
+          font-weight: normal;
+          background-color: $primary-color;
+          color: $text-white;
+
+          &:hover {
+            background-color: $primary-hover;
+            color: $text-white;
+            border-color: $primary-hover;
+          }
+        }
+
+        &.active {
+          font-weight: bold;
+          color: $text-white;
+          background-color: $primary-color;
+
+          @media (max-width: 768px) {
+            font-weight: normal; /* Ignorer la classe active en mobile */
+            background-color: $primary-color;
+            color: $text-white;
+          }
+        }
+      }
+    }
+  }
+}

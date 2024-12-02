@@ -1,0 +1,32 @@
+@import '../../styles/_variables.scss';
+
+footer {
+    background-color: $footer-bg;
+    color: $footer-text;
+    text-align: center;
+    padding: 1rem 0;
+  
+    .footer-content {
+      font-size: 0.9rem;
+  
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+  
+        li {
+          a {
+            text-decoration: none;
+            color: $primary-color;
+  
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
