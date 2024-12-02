@@ -38,4 +38,3 @@ function ProjectCard({ title, description, image, link, github, logo }) {
 }
 
 export default ProjectCard;
-

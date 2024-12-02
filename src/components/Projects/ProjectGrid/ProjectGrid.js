@@ -27,18 +27,24 @@ function ProjectGrid({ projects }) {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {projects.map((project, index) => (
-        <motion.div key={index} variants={cardVariants}>
-          <ProjectCard
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            link={project.link}
-            github={project.github}
-            logo={project.logo}
-          />
-        </motion.div>
-      ))}
+      {projects.map((project, index) => {
+        // Charger dynamiquement les images et les logos
+        const projectImage = require(`../../../images/${project.image}`);
+        const projectLogo = require(`../../../images/${project.logo}`);
+
+        return (
+          <motion.div key={index} variants={cardVariants}>
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              image={projectImage}
+              link={project.link}
+              github={project.github}
+              logo={projectLogo}
+            />
+          </motion.div>
+        );
+      })}
     </motion.div>
   );
 }
